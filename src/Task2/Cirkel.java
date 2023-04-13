@@ -9,12 +9,11 @@ public class Cirkel {
 
     public void setRadius(int r) {
 
-        try {
+
             if (r > 0) {
                 this.radius = r;
                 System.out.println("radius is set to: " + r);
-            }
-        } catch (Exception e) { /*ved ikke hvilken exception jeg skal bruge */
+            }else{
             System.out.println("only positive numbers are allowed to design a circle");
         }
     }

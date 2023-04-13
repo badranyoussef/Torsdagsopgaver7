@@ -7,69 +7,77 @@ public class TV {
     private int channel;
 
 
-    public void setChannel(int chooseChannel){
+    public int setChannel(int chooseChannel){
         if(isTvOn) {
             channel = chooseChannel;
             System.out.println("Channel "+chooseChannel+" is set");
         }else{
             System.out.println("You can not select af channel when the tv is off");
         }
+        return chooseChannel;
     }
 
-    public void setVolume(int setVolume){
+    public int setVolume(int setVolume){
         if(isTvOn) {
             volume = setVolume;
             System.out.println("Volume set to: "+setVolume);
         }else{
             System.out.println("You can not turn up or lower the volume when the tv is off");
         }
+        return setVolume;
     }
 
-    public void turnOff(){
+    public boolean turnOff(){
         isTvOn = false;
         System.out.println("The Task1.TV is turned OFF");
+        return false;
     }
 
-    public void turnOn(){
+    public boolean turnOn(){
         isTvOn = true;
         System.out.println("The Task1.TV is turned ON");
+        return true;
     }
 
-    public void channelUp() {
+    public int channelUp() {
         if(isTvOn) {
             channel++;
             System.out.println("Channel "+channel+" is set");
         }else{
             System.out.println("You can not select af channel when the tv is off");
         }
+        return channel;
     }
 
-    public void channelDown() {
+    public int channelDown() {
         if(isTvOn) {
             channel--;
             System.out.println("Channel "+channel+" is set");
         }else{
             System.out.println("You can not select af channel when the tv is off");
         }
+        return channel;
     }
 
 
-    public void volumeUp(){
+    public int volumeUp(){
         if(isTvOn) {
             volume++;
             System.out.println("Volume set to: "+volume);
         }else{
             System.out.println("You can not turn up or lower the volume when the tv is off");
         }
+        return volume;
     }
 
-    public void volumeDown(){
+    public int volumeDown(){
         if(isTvOn) {
             volume--;
             System.out.println("Volume set to: "+volume);
         }else{
             System.out.println("You can not turn up or lower the volume when the tv is off");
         }
+        return volume;
     }
 
     public int getVolume() {
