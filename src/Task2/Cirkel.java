@@ -14,10 +14,9 @@ public class Cirkel {
                 this.radius = r;
                 System.out.println("radius is set to: " + r);
             }
-        } catch (//ved ikke hvilken exception jeg skal bruge) {
+        } catch (Exception e) { /*ved ikke hvilken exception jeg skal bruge */
             System.out.println("only positive numbers are allowed to design a circle");
         }
-
     }
 
     public void getArea() {
