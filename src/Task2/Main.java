@@ -12,7 +12,12 @@ public class Main {
 
     Cirkel circle = new Cirkel();
 
-    circle.setRadius(-4);
+    try {
+        circle.setRadius(-4);
+    }catch (Exception e){
+        System.out.println("test");
+    }
+
     circle.getArea();
 
     }
